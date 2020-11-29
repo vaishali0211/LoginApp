@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/root"
+        tools:context=".MainActivity">
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:id="@+id/pageTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Login"
+                            android:textSize="17dp"
+                            android:layout_gravity="left|center"
+                            android:layout_marginLeft="30dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"/>
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+                android:layout_below="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="40dp">
+
+                <TextView
+                        android:id="@+id/sign_in_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="133dp"
+                        android:layout_marginRight="133dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/sign_in_text"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/sign_in_dialogue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="23dp"
+                        android:textColor="@color/black"
+                        android:layout_below="@+id/sign_in_text" />
+
+                <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginRight="23dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/sign_in_dialogue"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/userTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGrey" />
+
+                    <EditText
+                            android:id="@+id/etUsername"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_centerHorizontal="true"
+                            android:paddingLeft="3dp"
+                            android:textSize="18sp"
+                            android:inputType="text"
+                            android:drawableLeft="@drawable/ic_baseline_mail"
+                            android:drawablePadding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginRight="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/linear1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/passTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGrey" />
+
+                    <EditText
+                            android:id="@+id/etPass"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="textPassword"
+                            android:paddingLeft="3dp"
+                            android:textSize="18sp"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_lock"/>
+                </LinearLayout>
+
+                <FrameLayout
+                        android:id="@+id/forgot_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear2">
+
+                    <TextView
+                            android:id="@+id/forgotpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="23dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:text="@string/forgot_password"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/forgot_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/button">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Sign In"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <ImageView
+                            android:id="@+id/ivicon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/ic_baseline_arrow_forward" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                        android:id="@+id/register_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/login_button">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center">
+                        <TextView
+                                android:id="@+id/txt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Don't have an account?"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="16sp" />
+                        <TextView
+                                android:id="@+id/txt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" Sign up"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+
+

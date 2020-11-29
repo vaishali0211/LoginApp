@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Login App</string>
+    <string name="sign_in_text">Let’s Sign In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="term_condition">By creating an account, you agree to our
+Term &amp; Conditions</string>
+    <string name="account_sign_up_dialogue">Don\'t have an account? Sign up</string>
+    <string name="account_sign_in_dialogue">Don\'t have an account? Sign in</string>
+    <string name="google_login">LogIn with Google</string>
+    <string name="true_caller_login">LogIn with Number</string>
+    <string name="sign_up_text">Getting Started</string>
+    <string name="sign_up_dialogue">Create an account to continue!</string>
+</resources>
